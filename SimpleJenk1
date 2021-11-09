@@ -1,0 +1,11 @@
+node {
+        stage('clone'){
+                        git 'https://github.com/Fatoumata964/Deployment'
+        }
+        stage('test unitaire'){
+                                sh 'mvn test'
+        }
+        stage('package'){
+                          sh 'mvn package'
+        }
+        }
